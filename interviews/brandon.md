@@ -37,6 +37,8 @@ General - how many things the previous person was juggling, and how they work to
 - let people get up to speed on a few things
 - don't give people too much, so they don't have enough time to get 
 
+[Recording](https://metcmn-my.sharepoint.com/personal/liz_roten_metc_state_mn_us/_layouts/15/stream.aspx?id=%2Fpersonal%2Fliz%5Froten%5Fmetc%5Fstate%5Fmn%5Fus%2FDocuments%2FRecordings%2FData%20science%20onboarding%21%2D20230726%5F111249%2DMeeting%20Recording%2Emp4&ga=1)
+
 
 
 What are the tools you use every day? Write out a list

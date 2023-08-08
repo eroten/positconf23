@@ -54,3 +54,5 @@ combination of being a point person to ask questions, get answers.
 also kind of having a toolbox of things, and examples of how something is done
 institutional knowledge of projects, tools behind them, being willing to understand that everyone is learning, aksing questions is a good thing
 having a contact point for other people
+
+[Recording](https://metcmn-my.sharepoint.com/personal/liz_roten_metc_state_mn_us/_layouts/15/stream.aspx?id=%2Fpersonal%2Fliz%5Froten%5Fmetc%5Fstate%5Fmn%5Fus%2FDocuments%2FRecordings%2FMeeting%20request%5F%20data%20science%20onboarding%20experience%2D20230721%5F121928%2DMeeting%20Recording%2Emp4&ga=1)

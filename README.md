@@ -38,6 +38,7 @@ Timeline
     - Exercise, go to bed early, no sweets the morning of!
 
 Contact person for speaker coaching- Kim Goldsmith kim@articulationinc.com
+
 Conference email - conf@posit.co
 
 ## Presentation  

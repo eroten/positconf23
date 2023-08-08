@@ -23,13 +23,13 @@ My speaker portal [link](https://u32038960.ct.sendgrid.net/ls/click?upn=25l9Xv4V
 - Which slide format to use?
 
 Timeline
-- Mid-July: Meet with Brandon, Ellen
+- ✔️ Mid-July: Meet with Brandon, Ellen
 - Late July: Start slides, 
-- Early August: schedule brown-bag style runthrough at staff meeeting
-- Mid-August 1: Have content mostly finalized 
-- Late August?: Updated talk abstract
+- ✔️ Early August: schedule brown-bag style runthrough at staff meeeting
+- Late August: Have content mostly finalized, update talk abstract
 - September 3: Outfit assembly
-- September 13: Speaker Coaching Content Review  
+- September 13: Speaker Coaching Content Review
+- Septeber 13: Brown-bag style practice with coworkers
 - September 15: Complete talk backup recording
 - September 16: FLIGHT TO Chicago!
 - September 17: Scout out session location, stage
@@ -37,7 +37,8 @@ Timeline
     - Practice first thing in the morning, just before bed. 
     - Exercise, go to bed early, no sweets the morning of!
 
-Contact person - Kim Goldsmith!
+Contact person for speaker coaching- Kim Goldsmith kim@articulationinc.com
+Conference email - conf@posit.co
 
 ## Presentation  
 

@@ -1,0 +1,37 @@
+---
+title: "How to Gracefully Expand Your Team"
+author: "Liz Roten"
+
+affiliation: "Metropolitan Council"
+date: "September 17, 2023"
+date-format: long
+format: 
+  revealjs:
+    footer: "posit::conf(2023)"
+    theme: [theme.scss]
+    incremental: true
+    standalone: true
+---
+```{r}
+# window palette
+window_pal <- list(
+  dark_blue = "#162059",
+  med_blue = "#383E45",
+  light_blue ="#727A8C",
+  yellow = "#F2D091",
+  tan = "#D9CBBF",
+  red = "#592816",
+  dark_red = "#33190F")
+
+corner_pal <- list(
+  
+)
+```
+
+# All knowledge is valid
+
+# Make the implicit explicit
+
+# Good documentation above all else
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.

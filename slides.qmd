@@ -1,9 +1,8 @@
 ---
 title: "How to Gracefully Expand Your Team"
 author: "Liz Roten"
-
 affiliation: "Metropolitan Council"
-date: "September 17, 2023"
+date: "September 19, 2023"
 date-format: long
 format: 
   revealjs:
@@ -23,15 +22,12 @@ window_pal <- list(
   red = "#592816",
   dark_red = "#33190F")
 
-corner_pal <- list(
-  
-)
 ```
 
-# All knowledge is valid
+# All knowledge is valid {background-color="#F2D091"}
 
-# Make the implicit explicit
+# Make the implicit explicit {background-color="#D9CBBF"}
 
-# Good documentation above all else
+# Document 
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.

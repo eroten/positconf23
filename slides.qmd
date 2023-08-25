@@ -1,33 +1,125 @@
 ---
-title: "How to Gracefully Expand Your Team"
-author: "Liz Roten"
-affiliation: "Metropolitan Council"
+title: "Gracefully Expand Your Team"
+subtitle: "Peer-to-peer best practices for growing data science teams"
+author: 
+  - name: Liz Roten
+    orcid: 0000-0002-5346-3549
+    email: liz.roten@metc.state.mn.us
+    affiliations:
+      - name: Metropolitan Council
+        address: 390 Robert St. N.
+        city: Saint Paul
+        state: MN
+        postal-code: 55101
 date: "September 19, 2023"
 date-format: long
 format: 
   revealjs:
-    footer: "posit::conf(2023)"
-    theme: [theme.scss]
+    header: "posit::conf(2023)"
+    footer: '<a href="https://lizroten.com/gracefully" target="_blank">lizroten.com/gracefully</a>'
+    include-after-body: partials/clean_title_page.html
+    hide-from-titleSlide: "all"
+    menu: false
+    template: partials/template.html
+    theme: 
+      - theme.scss
+      - partials/title-slide.scss
     incremental: true
     standalone: true
+    mouse-wheel: true
+    template-partials:
+      - partials/title-slide.html
+      - partials/toc-slide.html
+filters: 
+  - reveal-header
+include-in-header:
+  - text: |
+      <link rel = "shortcut icon" href = "https://em-content.zobj.net/source/google/350/butterfly_1f98b.png" />
 ---
 ```{r}
 # window palette
+harem <- list(
+  prussian_blue      = "#0B273C",
+  cadet_gray         = "#989F9C",
+  carribbean_current = "#01606E",
+  pale_dogwood       = "#E3C0B6",
+  cadet_gray2        = "#A1B4B9",
+  bistre             = "#2E180F",
+  chinese_violet     = "#856084",
+  gold               = "#A68247"
+)
+
+
 window_pal <- list(
-  dark_blue = "#162059",
-  med_blue = "#383E45",
-  light_blue ="#727A8C",
-  yellow = "#F2D091",
-  tan = "#D9CBBF",
-  red = "#592816",
-  dark_red = "#33190F")
+  dark_blue =   "#162059",
+  med_blue =    "#383E45",
+  light_blue =  "#727A8C",
+  yellow =      "#F2D091",
+  tan =         "#D9CBBF",
+  red =         "#592816",
+  dark_red =    "#33190F")
 
 ```
 
-# All knowledge is valid {background-color="#F2D091"}
 
-# Make the implicit explicit {background-color="#D9CBBF"}
+## 
 
-# Document 
+In my workplace, we started off with a small data science team. 
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+This started when 
+
+when we got more data scientists on board, it became clear that we were all accustomed to working aloe
+
+
+## 
+
+1. All knowledge is valid
+2. Make the implicit explicit
+3. Documentation
+
+# All knowledge is valid {background-color="#D9CBBF"}
+
+## {background-color="#D9CBBF"}
+
+- Patience will prove best
+- You hired this person for a reason
+- Diversity 
+
+# Make the implicit explicit {background-color="#A1B4B9"}
+
+## Workplace culture {background-color="#A1B4B9"}
+
+![](https://i0.wp.com/thewholehearted.org/wp-content/uploads/2018/11/1_uoQIdBLZvy1Y_edZD9Gxig.jpeg?w=816&ssl=1)
+
+## {background-color="#A1B4B9"}
+
+- Everyone thinks that they don't have culture, but really, its what we are all surrounded with constantly.
+- Start by making a list of the tools you use on a daily basis, no matter how big or small
+
+
+# Document {background-color="#E3C0B6"}
+
+
+## A matter of investment {background-color="#E3C0B6"}
+
+
+- **Invest** in tools that encourage documentation and lower cognitive load.
+- **Invest** in the time it takes to document/clean up/organize your work
+- **Invest** in strong social relationships
+    - Try making every other team meeting a casual hang-out
+    - Schedule in time to build connections and trust
+    - These social gatherings are just as valuable as focus time
+
+
+Even if your new colleague says they have experience with git, that could mean very different things. 
+
+- A git GUI is a great way to visualize branches and track progress over time.
+
+<!-- Data science is a deeply creative field -->
+
+
+# Ultimately...
+
+## 
+
+I've grown immensely from working with my colleagues

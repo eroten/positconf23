@@ -123,3 +123,7 @@ Even if your new colleague says they have experience with git, that could mean v
 ## 
 
 I've grown immensely from working with my colleagues
+
+# Thank you
+
+<a href="https://lizroten.com/gracefully" target="_blank">lizroten.com/gracefully</a>

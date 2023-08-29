@@ -81,6 +81,9 @@ when we got more data scientists on board, it became clear that we were all accu
 
 ## {background-color="#D9CBBF"}
 
+<!-- Data science is a deeply creative field -->
+
+
 - Patience will prove best
 - You hired this person for a reason
 - Diversity 
@@ -104,18 +107,17 @@ when we got more data scientists on board, it became clear that we were all accu
 
 
 - **Invest** in tools that encourage documentation and lower cognitive load.
+<!-- - A git GUI is a great way to visualize branches and track progress over time. -->
+
 - **Invest** in the time it takes to document/clean up/organize your work
 - **Invest** in strong social relationships
-    - Try making every other team meeting a casual hang-out
-    - Schedule in time to build connections and trust
-    - These social gatherings are just as valuable as focus time
+
+<!-- - Try making every other team meeting a casual hang-out -->
+<!-- - Schedule in time to build connections and trust -->
+<!-- - These social gatherings are just as valuable as focus time -->
 
 
-Even if your new colleague says they have experience with git, that could mean very different things. 
-
-- A git GUI is a great way to visualize branches and track progress over time.
-
-<!-- Data science is a deeply creative field -->
+<!-- Even if your new colleague says they have experience with git, that could mean very different things.  -->
 
 
 # Ultimately...

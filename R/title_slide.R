@@ -118,3 +118,39 @@ purrr::map(split_palette_bubble, function(x) {
       plot.margin = margin(5, 5, 10, 5, "pt")
     )
 })
+
+
+## aRt ------
+
+remotes::install_github("nrennie/aRt")
+library(aRt)
+
+aRt::bricks(
+  colours = unname(unlist(harem))
+)
+
+aRt::divide(col_palette = unname(unlist(harem)))
+
+aRt::stacked()
+
+aRt::tiles()
+
+aRt::rings()
+
+aRt::streams()
+
+aRt::squares()
+
+aRt::fading()
+
+
+aRt::mosaic(
+  fill_cols = unname(unlist(harem))[c(1:4, 6:8)],
+  line_size = 0.1,
+  n = 50,
+  s = 24601,
+  x_means = sample(c(1:30), size = 15),
+  y_means = sample(c(1:30), size = 15)
+)
+  theme_classic()
+

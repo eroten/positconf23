@@ -1,5 +1,5 @@
 ---
-title: "Gracefully Expand Your Team"
+title: "The 'I' in Team"
 subtitle: "Peer-to-peer best practices for growing data science teams"
 author: 
   - name: Liz Roten
@@ -16,7 +16,7 @@ date-format: long
 format: 
   revealjs:
     header: "posit::conf(2023)"
-    footer: '<a href="https://lizroten.com/gracefully" target="_blank">lizroten.com/gracefully</a>'
+    footer: '<a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>'
     include-after-body: partials/clean_title_page.html
     hide-from-titleSlide: "all"
     menu: false
@@ -34,7 +34,7 @@ filters:
   - reveal-header
 include-in-header:
   - text: |
-      <link rel = "shortcut icon" href = "https://em-content.zobj.net/source/google/350/butterfly_1f98b.png" />
+      <link rel = "shortcut icon" href = "https://em-content.zobj.net/source/google/350/busts-in-silhouette_1f465.png" />
 ---
 ```{r}
 # window palette
@@ -64,31 +64,55 @@ window_pal <- list(
 
 ## 
 
-In my workplace, we started off with a small data science team. 
+In my workplace, we started off with a tiny data science team. 
 
-This started when 
 
-when we got more data scientists on board, it became clear that we were all accustomed to working aloe
+. . .
+
+
+And by tiny I mean 2 people. 
+
+when we got more data scientists on board, 
+it became clear that we were all accustomed to working alone
+
+This isn't exactly ideal for building a functional team with shared projects
+
+
+
+## 
+
+Work is work, and what makes it enjoyable, more than the subject matter, is the *people* you get work with and the team you create. 
+
+Your manager will accomplish lots of important things for bringing in a new person - but you are the person they get to work with day-to-day!
+
 
 
 ## 
 
 1. All knowledge is valid
 2. Make the implicit explicit
-3. Documentation
+3. Document
 
 # All knowledge is valid {background-color="#D9CBBF"}
 
 ## {background-color="#D9CBBF"}
 
-<!-- Data science is a deeply creative field -->
+Data science is a deeply creative field
 
+There is a lot of work that your manager will take care of...
+
+but 
+
+
+##  {background-color="#D9CBBF"}
 
 - Patience will prove best
-- You hired this person for a reason
-- Diversity 
-
+<!-- you will have to bring this person up to speed, and that is part of it -->
+- You(r manager) hired this person for a reason
+-
 # Make the implicit explicit {background-color="#A1B4B9"}
+
+
 
 ## Workplace culture {background-color="#A1B4B9"}
 
@@ -113,8 +137,7 @@ when we got more data scientists on board, it became clear that we were all accu
 - **Invest** in strong social relationships
 
 <!-- - Try making every other team meeting a casual hang-out -->
-<!-- - Schedule in time to build connections and trust -->
-<!-- - These social gatherings are just as valuable as focus time -->
+- Schedule in time to build connections and trust. These social gatherings are just as valuable as focus time
 
 
 <!-- Even if your new colleague says they have experience with git, that could mean very different things.  -->

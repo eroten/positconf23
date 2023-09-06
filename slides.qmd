@@ -59,6 +59,8 @@ window_pal <- list(
   red =         "#592816",
   dark_red =    "#33190F")
 
+library(ggplot2)
+library(magrittr)
 ```
 
 
@@ -66,22 +68,56 @@ window_pal <- list(
 
 In my workplace, we started off with a tiny data science team. 
 
-
+<!-- need *time*, place, and characters -->
 . . .
 
 
 And by tiny I mean 2 people. 
 
-when we got more data scientists on board, 
-it became clear that we were all accustomed to working alone
+. . . 
 
-This isn't exactly ideal for building a functional team with shared projects
+we managed to expand our team, and teach more folks about R.
+
+. . . 
+
+when we got more data scientists on board, 
+
+. . .
+
+it became clear that we were all **_very_** used to working alone with a single incident. 
+
+. . . 
+
+## ...how bad was this incident?
+
+I maintain an R package for folks in my workplace.
+
+It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers. 
+
+<!-- This isn't exactly ideal for building a functional team -->
+
+
+<!-- I don't think this story is particularly unique -->
+<!-- we all make mistakes that break other peoples' code -->
+- with shared projects
+- 
 
 
 
 ## 
 
-Work is work, and what makes it enjoyable, more than the subject matter, is the *people* you get work with and the team you create. 
+```{r}
+knitr::include_graphics("../../../GitHub/fishape/shapes/Cichlidae_Cichla.piquiti.png")
+```
+
+
+this talk is not about being a manager or how to manage a data science team, 
+
+but how to be a good colleague when someone new comes in
+
+## 
+
+<!-- Work is work, and what makes it enjoyable, more than the subject matter, is the *people* you get work with and the team you create.  -->
 
 Your manager will accomplish lots of important things for bringing in a new person - but you are the person they get to work with day-to-day!
 
@@ -89,41 +125,56 @@ Your manager will accomplish lots of important things for bringing in a new pers
 
 ## 
 
-1. All knowledge is valid
-2. Make the implicit explicit
-3. Document
+1. Make the implicit explicit
+1. All knowledge is valid and valuable
+1. Document (aka, make life easier for your friends)
 
-# All knowledge is valid {background-color="#D9CBBF"}
-
-## {background-color="#D9CBBF"}
-
-Data science is a deeply creative field
-
-There is a lot of work that your manager will take care of...
-
-but 
-
-
-##  {background-color="#D9CBBF"}
-
-- Patience will prove best
-<!-- you will have to bring this person up to speed, and that is part of it -->
-- You(r manager) hired this person for a reason
--
 # Make the implicit explicit {background-color="#A1B4B9"}
 
 
 
 ## Workplace culture {background-color="#A1B4B9"}
 
-![](https://i0.wp.com/thewholehearted.org/wp-content/uploads/2018/11/1_uoQIdBLZvy1Y_edZD9Gxig.jpeg?w=816&ssl=1)
 
 ## {background-color="#A1B4B9"}
 
+don't
 - Everyone thinks that they don't have culture, but really, its what we are all surrounded with constantly.
 - Start by making a list of the tools you use on a daily basis, no matter how big or small
+<!-- go through how you use them, and to what extent -->
+<!-- how do they make your life easier? -->
+- I recommend using a Git GUI (like GitKraken)
+<!-- - A git GUI is a great way to visualize branches and track progress over time. -->
+<!-- It also  -->
 
 
+
+
+# All knowledge is valuable {background-color="#D9CBBF"}
+
+## {background-color="#D9CBBF"}
+
+
+they have certain skill your team may have been lacking
+
+Data science is a deeply creative field. You can hand two different people a challenging problem and they both can come up with totally different ways of solving it
+
+all the knowledge that the new person is bringing in 
+
+There is a lot of work that your manager will take care of...
+
+the recipe for trust 
+
+
+##  {background-color="#D9CBBF"}
+
+- Patience will prove best
+<!-- your manager will do a lot of the legwork to get this person onboard,  -->
+<!-- like setting up timesheets and going through workplace policies -->
+<!-- but you are still the person they will be actually working with -->
+<!-- you will have to bring this person up to speed, and that is part of it -->
+- You(r manager) hired this person for a reason
+-
 # Document {background-color="#E3C0B6"}
 
 
@@ -131,11 +182,10 @@ but
 
 
 - **Invest** in tools that encourage documentation and lower cognitive load.
-<!-- - A git GUI is a great way to visualize branches and track progress over time. -->
-
 - **Invest** in the time it takes to document/clean up/organize your work
 - **Invest** in strong social relationships
 
+<!-- do things that don't feel like work -->
 <!-- - Try making every other team meeting a casual hang-out -->
 - Schedule in time to build connections and trust. These social gatherings are just as valuable as focus time
 
@@ -148,6 +198,8 @@ but
 ## 
 
 I've grown immensely from working with my colleagues
+
+Investing in your team not just as a manger, but as a coworker
 
 # Thank you
 

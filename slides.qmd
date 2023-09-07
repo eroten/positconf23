@@ -61,6 +61,17 @@ window_pal <- list(
 
 library(ggplot2)
 library(magrittr)
+library(councilR)
+
+showtext::showtext_auto()
+sysfonts::font_paths()
+files <- sysfonts::font_files()
+sysfonts::font_add("HelveticaNeueLT Std Cn", "HelveticaNeueLTStd-Cn.otf")
+sysfonts::font_add("HelveticaNeueLT Std Lt", "HelveticaNeueLTStd-Lt.otf")
+sysfonts::font_add("HelveticaNeueLT Std Thin", "HelveticaNeueLTStd-Th.otf")
+sysfonts::font_add("Arial Narrow", "Arial Narrow.ttf")
+sysfonts::font_add("HelveticaNeueLT Std Med Cn", "HelveticaNeueLTStd-MdCn.otf")
+sysfonts::font_add("Palatino Linotype", "pala.ttf")
 ```
 
 
@@ -73,6 +84,8 @@ In my workplace, we started off with a tiny data science team.
 
 
 And by tiny I mean 2 people. 
+
+Over time, we had some turnover and our team grew. 
 
 . . . 
 
@@ -92,11 +105,86 @@ it became clear that we were all **_very_** used to working alone with a single 
 
 I maintain an R package for folks in my workplace.
 
-It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers. 
+<!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
 
+Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme. 
+
+I made the changes, released the new version, and encouraged my colleagues to install it. 
+
+All was going well, until my colleague tried to actually use the new functions.
+
+...
+
+... while they were writing a time sensitive report
+
+## 
+
+```{r fig-good-plot}
+#| fig-cap-location: top
+#| fig-height: 6
+color_range_blue <- colorRampPalette(c("#e0e3e8", colors$playDaBlue))
+
+ggplot(datasets::airquality) +
+  aes(Solar.R, Wind, 
+      color = as.factor(Month)) +
+  geom_point(size = 9) +
+  scale_color_manual(values = color_range_blue(5)) +
+  labs(title = "A very important plot",
+       color = "Month",
+       x = "Solar",
+       y = "Wind",
+       caption = stringr::str_wrap(shinipsum::random_text(nwords = 20))) +
+  theme_council(use_showtext = TRUE,
+                base_size = 30) +
+  theme(plot.caption = element_text(size = 10),
+        plot.caption.position = "plot")
+```
+
+## 
+
+```{r fig-bad-plot}
+#| fig-cap-location: top
+#| fig-height: 6
+
+multiplier <- 1.5
+
+ggplot(datasets::airquality) +
+  aes(Solar.R, Wind, 
+      color = as.factor(Month)) +
+  geom_point(size = 9) +
+  scale_color_manual(values = color_range_blue(5)) +
+  labs(title = "A very important plot",
+       color = "Month",
+       x = "Solar",
+       y = "Wind",
+       caption = stringr::str_wrap(shinipsum::random_text(nwords = 20))) +
+  theme_council(use_showtext = TRUE,
+                use_manual_font_sizes = TRUE,
+                font_sizes = list(
+                            "title" = 20 * multiplier,
+                            "subtitle" = 16 * multiplier,
+                            "axis_title" = 16 * multiplier,
+                            "axis_text" = 6 * multiplier,
+                            "legend_title" = 9 * multiplier,
+                            "legend_text" = 14 * multiplier,
+                            "caption" = 16 * multiplier,
+                            "strip" = 14 * multiplier
+                          )) +
+  theme(axis.title.y = element_text(angle = 90),
+        plot.title = element_text(family = "HelveticaNeueLT Std Med Cn"),
+        plot.caption = element_text(
+          family = "Palatino Linotype"
+        ))
+
+```
+## So what went wrong?
+
+- Innacurate and incomplete documentation
+- Installed without reading docs
+- 
+
+##
 <!-- This isn't exactly ideal for building a functional team -->
-
-
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
 - with shared projects
@@ -106,9 +194,6 @@ It has all sorts of practical things, like color codes, ggplot2 themes, and data
 
 ## 
 
-```{r}
-knitr::include_graphics("../../../GitHub/fishape/shapes/Cichlidae_Cichla.piquiti.png")
-```
 
 
 this talk is not about being a manager or how to manage a data science team, 

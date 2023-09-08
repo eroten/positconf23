@@ -36,7 +36,7 @@ include-in-header:
   - text: |
       <link rel = "shortcut icon" href = "https://em-content.zobj.net/source/google/350/busts-in-silhouette_1f465.png" />
 ---
-```{r}
+```{r include=FALSE}
 # window palette
 harem <- list(
   prussian_blue      = "#0B273C",
@@ -62,6 +62,9 @@ window_pal <- list(
 library(ggplot2)
 library(magrittr)
 library(councilR)
+library(png)
+library(jpeg)
+source("R/fish.R")
 
 showtext::showtext_auto()
 sysfonts::font_paths()
@@ -119,7 +122,7 @@ All was going well, until my colleague tried to actually use the new functions.
 
 ## 
 
-```{r fig-good-plot}
+```{r plot-good}
 #| fig-cap-location: top
 #| fig-height: 6
 color_range_blue <- colorRampPalette(c("#e0e3e8", colors$playDaBlue))
@@ -142,7 +145,7 @@ ggplot(datasets::airquality) +
 
 ## 
 
-```{r fig-bad-plot}
+```{r plot-bad}
 #| fig-cap-location: top
 #| fig-height: 6
 
@@ -161,15 +164,15 @@ ggplot(datasets::airquality) +
   theme_council(use_showtext = TRUE,
                 use_manual_font_sizes = TRUE,
                 font_sizes = list(
-                            "title" = 20 * multiplier,
-                            "subtitle" = 16 * multiplier,
-                            "axis_title" = 16 * multiplier,
-                            "axis_text" = 6 * multiplier,
-                            "legend_title" = 9 * multiplier,
-                            "legend_text" = 14 * multiplier,
-                            "caption" = 16 * multiplier,
-                            "strip" = 14 * multiplier
-                          )) +
+                  "title" = 20 * multiplier,
+                  "subtitle" = 16 * multiplier,
+                  "axis_title" = 16 * multiplier,
+                  "axis_text" = 6 * multiplier,
+                  "legend_title" = 9 * multiplier,
+                  "legend_text" = 14 * multiplier,
+                  "caption" = 16 * multiplier,
+                  "strip" = 14 * multiplier
+                )) +
   theme(axis.title.y = element_text(angle = 90),
         plot.title = element_text(family = "HelveticaNeueLT Std Med Cn"),
         plot.caption = element_text(
@@ -177,23 +180,17 @@ ggplot(datasets::airquality) +
         ))
 
 ```
+
 ## So what went wrong?
 
-- Innacurate and incomplete documentation
-- Installed without reading docs
-- 
+- Inaccurate and inadequate documentation
+- Lack of communication
+- Mismatched priorities
 
-##
+##  
 <!-- This isn't exactly ideal for building a functional team -->
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
-- with shared projects
-- 
-
-
-
-## 
-
 
 
 this talk is not about being a manager or how to manage a data science team, 
@@ -217,9 +214,24 @@ Your manager will accomplish lots of important things for bringing in a new pers
 # Make the implicit explicit {background-color="#A1B4B9"}
 
 
-
 ## Workplace culture {background-color="#A1B4B9"}
 
+```{r}
+
+ggplot() +
+  geom_fish(mapping = aes(x = 0.75,
+                          y = 1,
+                          scale = 5,
+                          fish = "goldfish")) +
+  geom_fish(mapping = aes(x = 1,
+                          y = 0.25,
+                          scale = 5,
+                          fish = "goldfish"),
+            ) +
+  scale_y_continuous(limits = c(0,1)) +
+  scale_x_continuous(limits = c(0,1)) +
+  theme(legend.position = "none")
+```
 
 ## {background-color="#A1B4B9"}
 
@@ -235,9 +247,9 @@ don't
 
 
 
-# All knowledge is valuable {background-color="#D9CBBF"}
+# All knowledge is valuable {background-color="#E3C0B6"}
 
-## {background-color="#D9CBBF"}
+## {background-color="#E3C0B6"}
 
 
 they have certain skill your team may have been lacking
@@ -251,7 +263,7 @@ There is a lot of work that your manager will take care of...
 the recipe for trust 
 
 
-##  {background-color="#D9CBBF"}
+##  {background-color="#E3C0B6"}
 
 - Patience will prove best
 <!-- your manager will do a lot of the legwork to get this person onboard,  -->
@@ -259,16 +271,24 @@ the recipe for trust
 <!-- but you are still the person they will be actually working with -->
 <!-- you will have to bring this person up to speed, and that is part of it -->
 - You(r manager) hired this person for a reason
--
-# Document {background-color="#E3C0B6"}
+- Ask for specifics in their knowledge
+<!-- someone with command line git experience versus a GUI will have different needs -->
 
 
-## A matter of investment {background-color="#E3C0B6"}
+
+# Document {background-color="#D9CBBF"}
+
+
+## A matter of investment {background-color="#D9CBBF"}
 
 
 - **Invest** in tools that encourage documentation and lower cognitive load.
 - **Invest** in the time it takes to document/clean up/organize your work
 - **Invest** in strong social relationships
+
+## Work doesn't always feel like work {background-color="#D9CBBF"}
+
+<!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
 
 <!-- do things that don't feel like work -->
 <!-- - Try making every other team meeting a casual hang-out -->
@@ -280,7 +300,7 @@ the recipe for trust
 
 # Ultimately...
 
-## 
+## There is an "I" in "Team"
 
 I've grown immensely from working with my colleagues
 
@@ -288,4 +308,4 @@ Investing in your team not just as a manger, but as a coworker
 
 # Thank you
 
-<a href="https://lizroten.com/gracefully" target="_blank">lizroten.com/gracefully</a>
+<a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>

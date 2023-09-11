@@ -1,3 +1,9 @@
+# thank you ggbernie
+# https://github.com/R-CoderDotCom/ggbernie
+
+# fishes
+# https://pngimg.com/image/67588
+#
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' Key fish
 #'
@@ -14,15 +20,18 @@ draw_key_fish <-  function(data, params, size) {
 
 # fishGrob
 fishGrob <- function(x, y, size, fish = "goldfish",
+                     angle = 0,
                      geom_key = list(goldfish = "goldfish.png",
-                                     stand = "stand.png",
+                                     goldfish2 = "goldfish2.png",
+                                     goldfish_shocked = "goldfish_shocked.png",
+                                     bubble = "speech_bubble.png",
                                      head = "head.png",
                                      asking = "asking.png",
                                      young = "young.png",
                                      arms = "arms.png",
                                      eyebrows = "eyebrows.png")) {
 
-  filename <- paste0(fish,".png")
+  filename <- paste0("fish/", fish,".png")
   img <- as.raster(png::readPNG(filename))
 
   # rasterGrob
@@ -31,7 +40,7 @@ fishGrob <- function(x, y, size, fish = "goldfish",
                    image         = img,
                    # only set height so that the width scales proportionally and so that the icon
                    # stays the same size regardless of the dimensions of the plot
-                   height        = size * ggplot2::unit(20, "mm"))
+                   height = size * ggplot2::unit(20, "mm"))
 }
 
 # Geomfish

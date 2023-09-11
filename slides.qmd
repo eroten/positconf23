@@ -13,6 +13,9 @@ author:
         postal-code: 55101
 date: "September 19, 2023"
 date-format: long
+link-external-newwindow: false
+link-external-icon: true
+link-external-filter: "lizroten.com"
 format: 
   revealjs:
     header: "posit::conf(2023)"
@@ -36,7 +39,7 @@ include-in-header:
   - text: |
       <link rel = "shortcut icon" href = "https://em-content.zobj.net/source/google/350/busts-in-silhouette_1f465.png" />
 ---
-```{r include=FALSE}
+```{r setup, include=FALSE}
 # window palette
 harem <- list(
   prussian_blue      = "#0B273C",
@@ -61,6 +64,8 @@ window_pal <- list(
 
 library(ggplot2)
 library(magrittr)
+library(dplyr)
+library(tibble)
 library(councilR)
 library(png)
 library(jpeg)
@@ -75,6 +80,7 @@ sysfonts::font_add("HelveticaNeueLT Std Thin", "HelveticaNeueLTStd-Th.otf")
 sysfonts::font_add("Arial Narrow", "Arial Narrow.ttf")
 sysfonts::font_add("HelveticaNeueLT Std Med Cn", "HelveticaNeueLTStd-MdCn.otf")
 sysfonts::font_add("Palatino Linotype", "pala.ttf")
+sysfonts::font_add("Lato", "Lato-Regular.ttf")
 ```
 
 
@@ -111,12 +117,13 @@ I maintain an R package for folks in my workplace.
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
 
 Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme. 
+I was so excited to push this change out and magically make everything better.
 
 I made the changes, released the new version, and encouraged my colleagues to install it. 
 
 All was going well, until my colleague tried to actually use the new functions.
 
-...
+. . . 
 
 ... while they were writing a time sensitive report
 
@@ -187,15 +194,24 @@ ggplot(datasets::airquality) +
 - Lack of communication
 - Mismatched priorities
 
-##  
-<!-- This isn't exactly ideal for building a functional team -->
+# Could my manager have prevented or fixed this?
+
+
+. . . 
+
+
+... no 
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
+<!-- and we are the ones that have to clean up after ourselves -->
 
 
-this talk is not about being a manager or how to manage a data science team, 
+## There is an "I" in "Team"
 
-but how to be a good colleague when someone new comes in
+<!-- this talk is not about being a manager or how to manage a data science team,  -->
+
+You can __shape__ your team by caring for your team, and seeing how you fit into it. 
+<!-- but how to be a good colleague when someone new comes in -->
 
 ## 
 
@@ -211,67 +227,254 @@ Your manager will accomplish lots of important things for bringing in a new pers
 1. All knowledge is valid and valuable
 1. Document (aka, make life easier for your friends)
 
+
 # Make the implicit explicit {background-color="#A1B4B9"}
 
-
-## Workplace culture {background-color="#A1B4B9"}
-
-```{r}
-
-ggplot() +
-  geom_fish(mapping = aes(x = 0.75,
-                          y = 1,
-                          scale = 5,
-                          fish = "goldfish")) +
-  geom_fish(mapping = aes(x = 1,
-                          y = 0.25,
-                          scale = 5,
-                          fish = "goldfish"),
-            ) +
-  scale_y_continuous(limits = c(0,1)) +
+```{r fish-setup}
+fish_base <- ggplot() +
+  scale_y_continuous(limits = c(0,1.5)) +
   scale_x_continuous(limits = c(0,1)) +
-  theme(legend.position = "none")
+  coord_cartesian(clip = "off") +
+  theme_void() +
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = "#A1B4B9",
+                                       colour = NA))
+
+new_fish <- geom_fish(mapping = aes(x = 0.15,
+                                    y = 0.55,
+                                    fish = "goldfish2"),
+                      size = 3
+) 
+
+
+fish_positions <- tibble::tibble(
+  position = 2,
+  x = c(0.9, 0.75),
+  y = c(0.75, 0.35)
+) %>% 
+  bind_rows(
+    tibble::tibble(
+      position = 1,
+      x = c(0.6, 0.4),
+      y = c(0.85, 0.45)
+    )
+  )
 ```
+
 
 ## {background-color="#A1B4B9"}
 
-don't
-- Everyone thinks that they don't have culture, but really, its what we are all surrounded with constantly.
-- Start by making a list of the tools you use on a daily basis, no matter how big or small
+```{r fish-team, echo = FALSE}
+fish_base + 
+  geom_fish(data = fish_positions %>% 
+              filter(position == 1),
+            aes(x = x,
+                y = y,
+                fish = "goldfish"),
+            size = 4) 
+```
+
+
+## {auto-animate=true background-color="#A1B4B9"}
+
+<!-- Workplace culture is something you don't think about, because you're in it! -->
+
+```{r new-fish}
+#| fig-column: screen 
+#| fig-width: 10 
+#| out-width: "100%"
+
+fish_base +
+  geom_fish(
+    data = fish_positions %>% 
+      filter(position == 2),
+    mapping = aes(x = x,
+                  y = y,
+                  fish = "goldfish"),
+    size = 4) +
+  new_fish
+```
+
+
+## {background-color="#A1B4B9"}
+
+```{r fish-how-is-water}
+#| fig-column: screen 
+#| fig-width: 10 
+#| out-width: "100%"
+
+fish_base +
+  geom_fish(
+    data = fish_positions %>% 
+      filter(position == 2),
+    mapping = aes(x = x,
+                  y = y,
+                  fish = "goldfish"),
+    size = 4) +
+  new_fish +
+  geom_fish(mapping = aes(x = 0.5,
+                          y = 1.01,
+                          fish = "speech_bubble"),
+            size = 3
+  ) +
+  geom_text(
+    aes(x = 0.5,
+        y = 1.1,
+        label = "How's the water?"),
+    size = 8,
+    family = "Lato"
+  )
+```
+## {background-color="#A1B4B9"}
+
+```{r fish-blank}
+fish_base +
+  geom_fish(mapping = aes(x = 0.6,
+                          y = 1.01,
+                          fish = "speech_bubble2"),
+            size = 3
+  ) +
+  geom_text(
+    aes(x = 0.6,
+        y = 1.1,
+        label = "..."),
+    size = 8,
+    family = "Lato"
+  ) +
+  new_fish +
+  geom_fish(
+    data = fish_positions %>% 
+      filter(position == 2),
+    mapping = aes(x = x,
+                  y = y,
+                  fish = "goldfish"),
+    size = 4) 
+```
+
+
+## {background-color="#A1B4B9"}
+
+```{r fish-what-is-water}
+fish_base +
+  geom_fish(mapping = aes(x = 0.6,
+                          y = 1.01,
+                          fish = "speech_bubble2"),
+            size = 3
+  ) +
+  geom_text(
+    aes(x = 0.6,
+        y = 1.1,
+        label = "What the hell\nis water?"),
+    size = 8,
+    family = "Lato"
+  ) +
+  new_fish +
+  geom_fish(
+    data = fish_positions %>% 
+      filter(position == 2),
+    mapping = aes(x = x,
+                  y = y,
+                  fish = "goldfish"),
+    size = 4) 
+```
+
+
+## {background-color="#A1B4B9"}
+
+<!-- you could deny that there is water,  -->
+<!-- or say that your water is laid back and chill and like all other waters -->
+```{r fish-close}
+fish_base +
+  geom_fish(mapping = aes(x = 0.5,
+                          y = 0.5,
+                          fish = "goldfish"),
+            size = 4
+  ) 
+```
+
+
+## {background-color="#A1B4B9"}
+<!-- or you could sink into an existential crisis -->
+```{r fish-closer}
+fish_base +
+  geom_fish(mapping = aes(x = 0.5,
+                          y = 0.5,
+                          fish = "goldfish"),
+            size = 8
+  )
+```
+
+
+## {background-color="#A1B4B9"}
+
+```{r anxious-fish}
+fish_base +
+  geom_fish(mapping = aes(x = 1.5,
+                          y = 0.8,
+                          fish = "goldfish"),
+            size = 20
+  ) +
+  scale_x_continuous(limits = c(0, 1.5)) 
+```
+
+## Figure out what your water is like {background-color="#A1B4B9"}
+
+<!-- so, before you turn into an anxious goldfish... -->
+- What does your weekly schedule look like?
+- What tools do you use daily? Why?
+- What expectations does your work group have around email/message response times?
+<!-- - Everyone thinks that they don't have culture, but really, its what we are all surrounded with constantly. -->
+<!-- - Start by making a list of the tools you use on a daily basis, no matter how big or small -->
 <!-- go through how you use them, and to what extent -->
 <!-- how do they make your life easier? -->
-- I recommend using a Git GUI (like GitKraken)
+<!-- What are the gaps in your toolchain? -->
+<!-- - I recommend using a Git GUI (like GitKraken) -->
 <!-- - A git GUI is a great way to visualize branches and track progress over time. -->
-<!-- It also  -->
 
+## Don't deny that water exists {background-color="#A1B4B9"}
 
+Everyone has their pet peeves and preferences 
+</br>  
+</br> 
 
+. . . 
+
+</br>  
+</br>  
+(and they aren't inherently bad!)
+
+<!-- maybe you have a super strict file organization scheme -->
+<!-- or you are morally opposed using any tidyverse -->
 
 # All knowledge is valuable {background-color="#E3C0B6"}
 
-## {background-color="#E3C0B6"}
+## Data science is a creative field. {background-color="#E3C0B6"}
 
 
-they have certain skill your team may have been lacking
+<!-- they have certain skill your team may have been lacking -->
 
-Data science is a deeply creative field. You can hand two different people a challenging problem and they both can come up with totally different ways of solving it
+<!-- You can hand two different people a challenging problem and they both can come up with totally different ways of solving it -->
 
-all the knowledge that the new person is bringing in 
-
-There is a lot of work that your manager will take care of...
-
-the recipe for trust 
+all the knowledge that the new person is bringing in is valuable
 
 
-##  {background-color="#E3C0B6"}
+- no matter where they are coming from!
 
+
+<!-- There is a lot of work that your manager will take care of... -->
+<!-- the recipe for trust  -->
+
+
+## Honor your new colleague {background-color="#E3C0B6"}
+
+- They are testing out this new workplace
 - Patience will prove best
 <!-- your manager will do a lot of the legwork to get this person onboard,  -->
 <!-- like setting up timesheets and going through workplace policies -->
 <!-- but you are still the person they will be actually working with -->
 <!-- you will have to bring this person up to speed, and that is part of it -->
 - You(r manager) hired this person for a reason
-- Ask for specifics in their knowledge
+- Don't rely on catch-all assumptions: ask for specifics
 <!-- someone with command line git experience versus a GUI will have different needs -->
 
 
@@ -281,7 +484,6 @@ the recipe for trust
 
 ## A matter of investment {background-color="#D9CBBF"}
 
-
 - **Invest** in tools that encourage documentation and lower cognitive load.
 - **Invest** in the time it takes to document/clean up/organize your work
 - **Invest** in strong social relationships
@@ -289,23 +491,35 @@ the recipe for trust
 ## Work doesn't always feel like work {background-color="#D9CBBF"}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
-
+- Documentation is communication
 <!-- do things that don't feel like work -->
-<!-- - Try making every other team meeting a casual hang-out -->
-- Schedule in time to build connections and trust. These social gatherings are just as valuable as focus time
-
-
-<!-- Even if your new colleague says they have experience with git, that could mean very different things.  -->
+- Schedule time to build connections and trust. 
+<!-- try making every other team meeting a casual hang out -->
+- Social gatherings are just as valuable as focus time
 
 
 # Ultimately...
 
 ## There is an "I" in "Team"
 
-I've grown immensely from working with my colleagues
+Teams are made up of a bunch of individuals, and its not just the manager's job to make it work.
 
-Investing in your team not just as a manger, but as a coworker
+I've grown immensely from working with my colleagues
+<!-- and only a small portion of that is because of my manager -->
+
+<!-- Investing in your team not just as a manger, but as a coworker -->
 
 # Thank you
 
 <a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>
+
+
+# References 
+
+::: {.nonincremental}
+- Fish
+    - [Fish 1](https://pngimg.com/image/67588)
+    - [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 
+- David Foster Wallace 2005 Kenyon College commencement speech [here](https://fs.blog/david-foster-wallace-this-is-water/)
+
+:::

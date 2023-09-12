@@ -22,7 +22,7 @@ format:
     footer: '<a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>'
     include-after-body: partials/clean_title_page.html
     hide-from-titleSlide: "all"
-    menu: false
+    menu: true
     template: partials/template.html
     theme: 
       - theme.scss
@@ -84,9 +84,9 @@ sysfonts::font_add("Lato", "Lato-Regular.ttf")
 ```
 
 
-## 
+## In the beginning... 
 
-In my workplace, we started off with a tiny data science team. 
+We started off with a tiny data science team. 
 
 <!-- need *time*, place, and characters -->
 . . .
@@ -94,36 +94,49 @@ In my workplace, we started off with a tiny data science team.
 
 And by tiny I mean 2 people. 
 
-Over time, we had some turnover and our team grew. 
+. . . 
+
+Over time, our team grew. 
 
 . . . 
 
-we managed to expand our team, and teach more folks about R.
+More data scientists + R users
 
 . . . 
 
-when we got more data scientists on board, 
-
-. . .
-
-it became clear that we were all **_very_** used to working alone with a single incident. 
+but... 
 
 . . . 
+
+we were all **_very_** used to working alone. 
+
+. . . 
+
+<!-- this became clear with one particular incident -->
 
 ## ...how bad was this incident?
 
-I maintain an R package for folks in my workplace.
+
+. . .
+
+Back in the beginning, I wrote an R package for our org
+
+<img src="img/logo.png" data-lazy-loaded="" style="float: right;">
 
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
-
-Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme. 
-I was so excited to push this change out and magically make everything better.
-
-I made the changes, released the new version, and encouraged my colleagues to install it. 
-
-All was going well, until my colleague tried to actually use the new functions.
+<!-- Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme.  -->
+<!-- I was so excited to push this change out and magically make everything better. -->
+<!-- I made the changes, released the new version, and encouraged my colleagues to install it.  -->
 
 . . . 
+
+<br>
+
+My colleague installed the update.
+
+. . . 
+
+<br>
 
 ... while they were writing a time sensitive report
 
@@ -188,19 +201,17 @@ ggplot(datasets::airquality) +
 
 ```
 
-## So what went wrong?
+## What went wrong?
 
 - Inaccurate and inadequate documentation
 - Lack of communication
 - Mismatched priorities
 
-# Could my manager have prevented or fixed this?
+# Could my manager have prevented this?
 
-
-. . . 
-
-
-... no 
+:::{.fragment style="text-align:right;"}
+### No 
+:::
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
 <!-- and we are the ones that have to clean up after ourselves -->
@@ -208,18 +219,26 @@ ggplot(datasets::airquality) +
 
 ## There is an "I" in "Team"
 
+<!-- several I's in fact -->
+
+. . . 
+
+### Team: a group of **individuals** working together
+
+
 <!-- this talk is not about being a manager or how to manage a data science team,  -->
 
-You can __shape__ your team by caring for your team, and seeing how you fit into it. 
+. . . 
+
+You can __shape__ your team by 
+
+- caring for your team
+- seeing how you fit into it. 
 <!-- but how to be a good colleague when someone new comes in -->
-
-## 
-
+<!-- it isn't always obvious how you should shift your mindset when your team expands -->
 <!-- Work is work, and what makes it enjoyable, more than the subject matter, is the *people* you get work with and the team you create.  -->
 
-Your manager will accomplish lots of important things for bringing in a new person - but you are the person they get to work with day-to-day!
-
-
+<!-- Your manager will accomplish lots of important things for bringing in a new person - but you are the person they get to work with day-to-day! -->
 
 ## 
 
@@ -417,21 +436,12 @@ fish_base +
   scale_x_continuous(limits = c(0, 1.5)) 
 ```
 
-## Figure out what your water is like {background-color="#A1B4B9"}
-
-<!-- so, before you turn into an anxious goldfish... -->
-- What does your weekly schedule look like?
-- What tools do you use daily? Why?
-- What expectations does your work group have around email/message response times?
-<!-- - Everyone thinks that they don't have culture, but really, its what we are all surrounded with constantly. -->
-<!-- - Start by making a list of the tools you use on a daily basis, no matter how big or small -->
-<!-- go through how you use them, and to what extent -->
-<!-- how do they make your life easier? -->
-<!-- What are the gaps in your toolchain? -->
-<!-- - I recommend using a Git GUI (like GitKraken) -->
-<!-- - A git GUI is a great way to visualize branches and track progress over time. -->
-
 ## Don't deny that water exists {background-color="#A1B4B9"}
+<!-- so, before you turn into an anxious goldfish... -->
+
+- Every team has a culture
+- Don't give your coworker the task of defining water in addition to evaluating if the water is right for them.
+
 
 Everyone has their pet peeves and preferences 
 </br>  
@@ -446,9 +456,24 @@ Everyone has their pet peeves and preferences
 <!-- maybe you have a super strict file organization scheme -->
 <!-- or you are morally opposed using any tidyverse -->
 
-# All knowledge is valuable {background-color="#E3C0B6"}
 
-## Data science is a creative field. {background-color="#E3C0B6"}
+## Figure out what your water is like {background-color="#A1B4B9"}
+
+- What does your weekly schedule look like?
+- What tools do you use daily? Why?
+- What expectations does your work group have around email/message response times?
+<!-- - Everyone thinks that they don't have culture, but really, its what we are all surrounded with constantly. -->
+<!-- - Start by making a list of the tools you use on a daily basis, no matter how big or small -->
+<!-- go through how you use them, and to what extent -->
+<!-- how do they make your life easier? -->
+<!-- What are the gaps in your toolchain? -->
+<!-- - I recommend using a Git GUI (like GitKraken) -->
+<!-- - A git GUI is a great way to visualize branches and track progress over time. -->
+
+# All knowledge is valuable {background-color="#E3C0B6"}  
+
+
+##  {background-color="#E3C0B6"}
 
 
 <!-- they have certain skill your team may have been lacking -->
@@ -480,6 +505,31 @@ all the knowledge that the new person is bringing in is valuable
 
 
 # Document {background-color="#D9CBBF"}
+
+
+## {background-color="#D9CBBF" style="text-align:center;"}
+::: {.r-stack}
+::: {.fragment .fade-out fragment-index=1}
+### Which comes first?
+:::: {.columns}
+::: {.column width="50%"}
+![](img/cereal.png)
+:::
+::: {.column width="50%"}
+![](img/milk.png)
+:::
+::::
+:::
+::: {.fragment .fade-up fragment-index=1}
+### The bowl!
+![](img/bowl.png)
+:::
+
+:::
+
+## Data science is a creative field {background-color="#D9CBBF"}
+
+There are many ways to solve a problem 
 
 
 ## A matter of investment {background-color="#D9CBBF"}
@@ -520,6 +570,11 @@ I've grown immensely from working with my colleagues
 - Fish
     - [Fish 1](https://pngimg.com/image/67588)
     - [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 
+- Cereal
+    - The Suite Life of Zack and Cody Quotes. (n.d.). Quotes.net. Retrieved September 12, 2023, from https://www.quotes.net/mquote/928559.
+    - [Cereal](https://www.pngwing.com/en/free-png-xzukp)
+    - [Milk](https://www.deviantart.com/vacagalo/art/milk-drop-png-milk-splash-transparent-background-P-869641339)
+    - [Bowl](https://www.pngwing.com/en/free-png-izipa)
 - David Foster Wallace 2005 Kenyon College commencement speech [here](https://fs.blog/david-foster-wallace-this-is-water/)
 
 :::

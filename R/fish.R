@@ -31,7 +31,7 @@ fishGrob <- function(x, y, size, fish = "goldfish",
                                      arms = "arms.png",
                                      eyebrows = "eyebrows.png")) {
 
-  filename <- paste0("fish/", fish,".png")
+  filename <- paste0("img/", fish,".png")
   img <- as.raster(png::readPNG(filename))
 
   # rasterGrob

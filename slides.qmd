@@ -13,12 +13,16 @@ author:
         postal-code: 55101
 date: "September 19, 2023"
 date-format: long
+self-contained: true
+embed-resources: true
 link-external-newwindow: false
 link-external-icon: true
 link-external-filter: "lizroten.com"
 format: 
   revealjs:
     header: "posit::conf(2023)"
+    progress: false
+    section-divs: true
     footer: '<a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>'
     include-after-body: partials/clean_title_page.html
     hide-from-titleSlide: "all"
@@ -116,12 +120,11 @@ we were all **_very_** used to working alone.
 
 ## ...how bad was this incident?
 
-
 . . .
 
 Back in the beginning, I wrote an R package for our org
 
-<img src="img/logo.png" data-lazy-loaded="" style="float: right;">
+<img src="img/logo.png" data-lazy-loaded="" style="float: right; width: 35%">
 
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
 <!-- Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme.  -->
@@ -216,9 +219,7 @@ ggplot(datasets::airquality) +
 <!-- we all make mistakes that break other peoples' code -->
 <!-- and we are the ones that have to clean up after ourselves -->
 
-
 ## There is an "I" in "Team"
-
 <!-- several I's in fact -->
 
 . . . 
@@ -228,7 +229,8 @@ ggplot(datasets::airquality) +
 
 <!-- this talk is not about being a manager or how to manage a data science team,  -->
 
-. . . 
+. . .
+
 
 You can __shape__ your team by 
 

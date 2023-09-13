@@ -93,44 +93,34 @@ sysfonts::font_add("Lato", "Lato-Regular.ttf")
 ```
 
 
-## In the beginning... 
+## In the beginning... {background-image="img/barbie.png"}
+
+. . . 
 
 We started off with a tiny data science team. 
 
 <!-- need *time*, place, and characters -->
 . . .
 
-
 And by tiny I mean 2 people. 
 
-. . . 
-
-Over time, our team grew. 
-
-. . . 
-
-More data scientists + R users
-
-. . . 
-
-but... 
-
-. . . 
-
-we were all **_very_** used to working alone. 
-
-. . . 
-
+<!-- Over time, our team grew.  -->
+<!-- More data scientists + R users -->
+<!-- but...  -->
+<!-- we were all **_very_** used to working alone.  -->
 <!-- this became clear with one particular incident -->
+## ...how bad was this incident?
+::: {.fragment .strike}
+Back in the beginning, I wrote an R package for my org
+:::
 
 ## ...how bad was this incident?
 
-. . .
+Back in the beginning, I wrote an R package for __myself__
 
-Back in the beginning, I wrote an R package for our org
-
-<img src="img/logo.png" data-lazy-loaded="" style="float: right; width: 35%">
-
+::: {.fragment .fade-in}
+<img src="img/logo2.png" data-lazy-loaded="" style="float: right; width: 35%">
+:::
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
 <!-- Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme.  -->
 <!-- I was so excited to push this change out and magically make everything better. -->
@@ -148,7 +138,18 @@ My colleague installed the update.
 
 ... while they were writing a time sensitive report
 
-## 
+<!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
+<!-- Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme.  -->
+<!-- I was so excited to push this change out and magically make everything better. -->
+<!-- I made the changes, released the new version, and encouraged my colleagues to install it.  -->
+
+## {}
+```{r}
+#| echo: true 
+#| eval: false
+my_plot +
+  theme_council()
+```
 
 ```{r plot-good}
 #| fig-cap-location: top
@@ -171,7 +172,14 @@ ggplot(datasets::airquality) +
         plot.caption.position = "plot")
 ```
 
-## 
+
+## {}
+```{r}
+#| echo: true 
+#| eval: false
+my_plot +
+  theme_council()
+```
 
 ```{r plot-bad}
 #| fig-cap-location: top
@@ -195,8 +203,8 @@ ggplot(datasets::airquality) +
                   "title" = 20 * multiplier,
                   "subtitle" = 16 * multiplier,
                   "axis_title" = 16 * multiplier,
-                  "axis_text" = 6 * multiplier,
-                  "legend_title" = 9 * multiplier,
+                  "axis_text" = 3 * multiplier,
+                  "legend_title" = 5 * multiplier,
                   "legend_text" = 14 * multiplier,
                   "caption" = 16 * multiplier,
                   "strip" = 14 * multiplier
@@ -217,9 +225,9 @@ ggplot(datasets::airquality) +
 
 ## Could my manager have prevented this?
 
-:::{.fragment style="text-align:right;"}
-No 
-:::
+. . . 
+
+No
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
 <!-- and we are the ones that have to clean up after ourselves -->
@@ -239,8 +247,10 @@ Team: a group of **individuals** working together
 
 You can __shape__ your team by 
 
-- caring for your team
-- seeing how you fit into it. 
+- caring for your team members
+- seeing how you fit into your team
+- changing your mindset
+
 <!-- but how to be a good colleague when someone new comes in -->
 <!-- it isn't always obvious how you should shift your mindset when your team expands -->
 <!-- Work is work, and what makes it enjoyable, more than the subject matter, is the *people* you get work with and the team you create.  -->
@@ -447,19 +457,9 @@ fish_base +
 ## Don't deny that water exists {background-color=`r section1_color`}
 <!-- so, before you turn into an anxious goldfish... -->
 
+- Everyone has their pet peeves and preferences 
 - Every team has a culture
 - Don't give your coworker the task of defining water in addition to evaluating if the water is right for them.
-
-
-Everyone has their pet peeves and preferences 
-</br>  
-</br> 
-
-. . . 
-
-</br>  
-</br>  
-(and they aren't inherently bad!)
 
 <!-- maybe you have a super strict file organization scheme -->
 <!-- or you are morally opposed using any tidyverse -->
@@ -481,14 +481,14 @@ Everyone has their pet peeves and preferences
 # All knowledge is valuable {background-color=`r section2_color`}  
 
 
-##  {background-color="#E3C0B6"}
+##  {background-color=`r section2_color`}
 
 
 <!-- they have certain skill your team may have been lacking -->
 
 <!-- You can hand two different people a challenging problem and they both can come up with totally different ways of solving it -->
 
-all the knowledge that the new person is bringing in is valuable
+All the knowledge the new person brings is valuable
 
 
 - no matter where they are coming from!
@@ -500,13 +500,12 @@ all the knowledge that the new person is bringing in is valuable
 
 ## Give your new colleague grace {background-color=`r section2_color`}
 
-- They are testing out this new workplace
 - Patience will prove best
+- You are also on probation
 <!-- your manager will do a lot of the legwork to get this person onboard,  -->
 <!-- like setting up timesheets and going through workplace policies -->
 <!-- but you are still the person they will be actually working with -->
 <!-- you will have to bring this person up to speed, and that is part of it -->
-- You(r manager) hired this person for a reason
 - Don't rely on catch-all assumptions: ask for specifics
 <!-- someone with command line git experience versus a GUI will have different needs -->
 
@@ -543,8 +542,13 @@ The bowl!
 
 There are many ways to solve a problem 
 
+. . . 
+
 Embrace the diversity of opinion and experience
 
+. . . 
+
+Just remember to leave a trail for others to follow
 
 ## A matter of investment {background-color=`r section3_color`}
 
@@ -553,6 +557,17 @@ Embrace the diversity of opinion and experience
 - **Invest** in strong social relationships
 
 ## Documentation == Communication {background-color=`r section3_color`}
+
+Good communication requires knowing your audience
+
+```{mermaid}
+flowchart LR
+  A(Documentation) === B[[Communication]]
+  
+  B --> C{Decision}
+```
+
+## Work doesn't always feel like work {background-color=`r section3_color`}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
 - Documentation is communication
@@ -581,6 +596,7 @@ I've grown immensely from working with my colleagues
 # References {.smaller}
 
 ::: {.nonincremental}
+- Barbie Image copyright (©) Warner Bros. Pictures or related entities. Used for publicity and promotional purposes.
 - Fish
     - [Fish 1](https://pngimg.com/image/67588)
     - [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 

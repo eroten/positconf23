@@ -144,7 +144,7 @@ My colleague installed the update.
 <!-- I made the changes, released the new version, and encouraged my colleagues to install it.  -->
 
 ## {}
-```{r}
+```{r plot-code-1}
 #| echo: true 
 #| eval: false
 my_plot +
@@ -174,7 +174,7 @@ ggplot(datasets::airquality) +
 
 
 ## {}
-```{r}
+```{r plot-code-2}
 #| echo: true 
 #| eval: false
 my_plot +

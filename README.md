@@ -1,4 +1,4 @@
-# How to Gracefully Expand Your R Team 
+# The 'I' in Team
 ### September 19, 2023, 11:00am - 11:20am, [link](https://reg.conf.posit.co/flow/posit/positconf23/publiccatalog/page/publiccatalog?search=%22Liz%20Roten%22)
 
 This repo contains slides and supporting materials for my presentation at the [2023 Posit Conference](https://posit.co/conference/) in Chicago, September 17th-20th.  

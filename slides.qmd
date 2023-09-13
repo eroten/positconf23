@@ -23,6 +23,7 @@ format:
     header: "posit::conf(2023)"
     progress: false
     section-divs: true
+    slide-level: 2
     footer: '<a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>'
     include-after-body: partials/clean_title_page.html
     hide-from-titleSlide: "all"
@@ -210,10 +211,10 @@ ggplot(datasets::airquality) +
 - Lack of communication
 - Mismatched priorities
 
-# Could my manager have prevented this?
+## Could my manager have prevented this?
 
 :::{.fragment style="text-align:right;"}
-### No 
+No 
 :::
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
@@ -224,7 +225,7 @@ ggplot(datasets::airquality) +
 
 . . . 
 
-### Team: a group of **individuals** working together
+Team: a group of **individuals** working together
 
 
 <!-- this talk is not about being a manager or how to manage a data science team,  -->
@@ -492,7 +493,7 @@ all the knowledge that the new person is bringing in is valuable
 <!-- the recipe for trust  -->
 
 
-## Honor your new colleague {background-color="#E3C0B6"}
+## Give your new colleague grace {background-color="#E3C0B6"}
 
 - They are testing out this new workplace
 - Patience will prove best
@@ -512,7 +513,9 @@ all the knowledge that the new person is bringing in is valuable
 ## {background-color="#D9CBBF" style="text-align:center;"}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=1}
-### Which comes first?
+
+Which comes first?
+
 :::: {.columns}
 ::: {.column width="50%"}
 ![](img/cereal.png)
@@ -523,7 +526,9 @@ all the knowledge that the new person is bringing in is valuable
 ::::
 :::
 ::: {.fragment .fade-up fragment-index=1}
-### The bowl!
+
+The bowl!
+
 ![](img/bowl.png)
 :::
 
@@ -532,6 +537,8 @@ all the knowledge that the new person is bringing in is valuable
 ## Data science is a creative field {background-color="#D9CBBF"}
 
 There are many ways to solve a problem 
+
+Embrace the diversity of opinion and experience
 
 
 ## A matter of investment {background-color="#D9CBBF"}
@@ -566,7 +573,7 @@ I've grown immensely from working with my colleagues
 <a href="https://lizroten.com/team" target="_blank">lizroten.com/team</a>
 
 
-# References 
+# References {.smaller}
 
 ::: {.nonincremental}
 - Fish

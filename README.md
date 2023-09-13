@@ -19,17 +19,17 @@ My speaker portal [link](https://u32038960.ct.sendgrid.net/ls/click?upn=25l9Xv4V
 - :heavy_check_mark:️ Update speaker bio, speaker photo, affiliation
 - :heavy_check_mark: Book flight, hotel
 - Make social plans with Ashley, Jack McCarthy, other Mac folks
-- Re-factor website to Quarto?
-- Which slide format to use?
+- ~~Re-factor website to Quarto?~~
+- Which slide format to use? -> Quarto
 
 Timeline
 - ✔️ Mid-July: Meet with Brandon, Ellen
-- Late July: Start slides, 
+- ✔️ Late July: Start slides, 
 - ✔️ Early August: schedule brown-bag style runthrough at staff meeeting
-- Late August: Have content mostly finalized, update talk abstract
-- September 3: Outfit assembly
-- September 13: Speaker Coaching Content Review
-- Septeber 13: Brown-bag style practice with coworkers
+- ✔️ Late August: Have content mostly finalized, update talk abstract
+- ✔️ September 3: Outfit assembly
+- ✔️ September 13: Speaker Coaching Content Review
+- Septeber 14: Brown-bag style practice with coworkers
 - September 15: Complete talk backup recording
 - September 16: FLIGHT TO Chicago!
 - September 17: Scout out session location, stage
@@ -43,7 +43,7 @@ Conference email - conf@posit.co
 
 ## Presentation  
 
-Slides, formatting TBD
+Built with Quarto
 
 ### Repo structure  
 

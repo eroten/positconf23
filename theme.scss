@@ -28,11 +28,11 @@ $dark-blue:        #162059;
 $med-blue:         #383E45;
 $light-blue:       #727A8C;
 $yellow:           #F2D091;
-$tan:              #D9CBBF;
+$tan:              #F4EFEB;
 $red:              #592816;
 $dark-red:         #33190F;
 
-$body-bg: #fff !default;
+$body-bg: $tan !default;
 $body-color: $prussian-blue !default;
 $link-color: $carribbean-blue !default;
 $selection-bg: rgba(0, 0, 0, 0.99);

@@ -76,6 +76,10 @@ library(png)
 library(jpeg)
 source("R/fish.R")
 
+section1_color <- "#A1B4B9"
+section2_color <- "#E3C0B6"
+section3_color <- "#CEB7CD"
+
 showtext::showtext_auto()
 sysfonts::font_paths()
 files <- sysfonts::font_files()
@@ -250,7 +254,7 @@ You can __shape__ your team by
 1. Document (aka, make life easier for your friends)
 
 
-# Make the implicit explicit {background-color="#A1B4B9"}
+# Make the implicit explicit {background-color=`r section1_color`}
 
 ```{r fish-setup}
 fish_base <- ggplot() +
@@ -284,7 +288,7 @@ fish_positions <- tibble::tibble(
 ```
 
 
-## {background-color="#A1B4B9"}
+## {background-color=`r section1_color`}
 
 ```{r fish-team, echo = FALSE}
 fish_base + 
@@ -297,7 +301,7 @@ fish_base +
 ```
 
 
-## {auto-animate=true background-color="#A1B4B9"}
+## {auto-animate=true background-color=`r section1_color`}
 
 <!-- Workplace culture is something you don't think about, because you're in it! -->
 
@@ -318,7 +322,7 @@ fish_base +
 ```
 
 
-## {background-color="#A1B4B9"}
+## {background-color=`r section1_color`}
 
 ```{r fish-how-is-water}
 #| fig-column: screen 
@@ -347,7 +351,8 @@ fish_base +
     family = "Lato"
   )
 ```
-## {background-color="#A1B4B9"}
+
+## {background-color=`r section1_color`}
 
 ```{r fish-blank}
 fish_base +
@@ -373,8 +378,7 @@ fish_base +
     size = 4) 
 ```
 
-
-## {background-color="#A1B4B9"}
+## {background-color=`r section1_color`}
 
 ```{r fish-what-is-water}
 fish_base +
@@ -401,7 +405,7 @@ fish_base +
 ```
 
 
-## {background-color="#A1B4B9"}
+## {background-color=`r section1_color`}
 
 <!-- you could deny that there is water,  -->
 <!-- or say that your water is laid back and chill and like all other waters -->
@@ -415,7 +419,8 @@ fish_base +
 ```
 
 
-## {background-color="#A1B4B9"}
+## {background-color=`r section1_color`}
+
 <!-- or you could sink into an existential crisis -->
 ```{r fish-closer}
 fish_base +
@@ -427,7 +432,7 @@ fish_base +
 ```
 
 
-## {background-color="#A1B4B9"}
+## {background-color=`r section1_color`}
 
 ```{r anxious-fish}
 fish_base +
@@ -439,7 +444,7 @@ fish_base +
   scale_x_continuous(limits = c(0, 1.5)) 
 ```
 
-## Don't deny that water exists {background-color="#A1B4B9"}
+## Don't deny that water exists {background-color=`r section1_color`}
 <!-- so, before you turn into an anxious goldfish... -->
 
 - Every team has a culture
@@ -460,7 +465,7 @@ Everyone has their pet peeves and preferences
 <!-- or you are morally opposed using any tidyverse -->
 
 
-## Figure out what your water is like {background-color="#A1B4B9"}
+## How is your water? {background-color=`r section1_color`}
 
 - What does your weekly schedule look like?
 - What tools do you use daily? Why?
@@ -473,7 +478,7 @@ Everyone has their pet peeves and preferences
 <!-- - I recommend using a Git GUI (like GitKraken) -->
 <!-- - A git GUI is a great way to visualize branches and track progress over time. -->
 
-# All knowledge is valuable {background-color="#E3C0B6"}  
+# All knowledge is valuable {background-color=`r section2_color`}  
 
 
 ##  {background-color="#E3C0B6"}
@@ -493,7 +498,7 @@ all the knowledge that the new person is bringing in is valuable
 <!-- the recipe for trust  -->
 
 
-## Give your new colleague grace {background-color="#E3C0B6"}
+## Give your new colleague grace {background-color=`r section2_color`}
 
 - They are testing out this new workplace
 - Patience will prove best
@@ -507,10 +512,10 @@ all the knowledge that the new person is bringing in is valuable
 
 
 
-# Document {background-color="#D9CBBF"}
+# Document {background-color=`r section3_color`}
 
 
-## {background-color="#D9CBBF" style="text-align:center;"}
+## {background-color=`r section3_color` style="text-align:center;"}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=1}
 
@@ -534,20 +539,20 @@ The bowl!
 
 :::
 
-## Data science is a creative field {background-color="#D9CBBF"}
+## Data science is a creative field {background-color=`r section3_color`}
 
 There are many ways to solve a problem 
 
 Embrace the diversity of opinion and experience
 
 
-## A matter of investment {background-color="#D9CBBF"}
+## A matter of investment {background-color=`r section3_color`}
 
 - **Invest** in tools that encourage documentation and lower cognitive load.
 - **Invest** in the time it takes to document/clean up/organize your work
 - **Invest** in strong social relationships
 
-## Work doesn't always feel like work {background-color="#D9CBBF"}
+## Documentation == Communication {background-color=`r section3_color`}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
 - Documentation is communication

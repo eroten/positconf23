@@ -17,7 +17,7 @@ self-contained: true
 embed-resources: true
 link-external-newwindow: false
 link-external-icon: true
-link-external-filter: "lizroten.com"
+link-external-filter: "github.com|lizroten.com"
 format: 
   revealjs:
     header: "posit::conf(2023)"
@@ -65,7 +65,9 @@ window_pal <- list(
   yellow =      "#F2D091",
   tan =         "#D9CBBF",
   red =         "#592816",
-  dark_red =    "#33190F")
+  dark_red =    "#33190F"
+)
+
 
 library(ggplot2)
 library(magrittr)
@@ -102,26 +104,32 @@ We started off with a tiny data science team.
 <!-- need *time*, place, and characters -->
 . . .
 
-And by tiny I mean 2 people. 
+And by tiny, I mean 2 people. 
 
 <!-- Over time, our team grew.  -->
 <!-- More data scientists + R users -->
 <!-- but...  -->
 <!-- we were all **_very_** used to working alone.  -->
 <!-- this became clear with one particular incident -->
-## ...how bad was this incident?
+
+# The Incident {background-image="img/barbie_incident.jpeg"}
+
+
+## ...how bad was the incident?
 ::: {.fragment .strike}
-Back in the beginning, I wrote an R package for my org
+In the beginning, I wrote an R package for my org
 :::
 
-## ...how bad was this incident?
+## ...how bad was the incident?
 
-Back in the beginning, I wrote an R package for __myself__
+In the beginning, I wrote an R package for __myself__
 
-::: {.fragment .fade-in}
-<img src="img/logo2.png" data-lazy-loaded="" style="float: right; width: 35%">
-:::
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
+
+::: {.fragment .no-fade}
+<a href="https://github.com/Metropolitan-Council/councilR" target="_blank"><img src="img/logo2.png" data-lazy-loaded="" style="float: right; width: 35%"></a>
+:::
+
 <!-- Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme.  -->
 <!-- I was so excited to push this change out and magically make everything better. -->
 <!-- I made the changes, released the new version, and encouraged my colleagues to install it.  -->
@@ -145,7 +153,7 @@ My colleague installed the update.
 
 ## {}
 ```{r plot-code-1}
-#| echo: true 
+#| echo: true
 #| eval: false
 my_plot +
   theme_council()
@@ -153,29 +161,36 @@ my_plot +
 
 ```{r plot-good}
 #| fig-cap-location: top
-#| fig-height: 6
+#| out-width: "100%"
 color_range_blue <- colorRampPalette(c("#e0e3e8", colors$playDaBlue))
 
 ggplot(datasets::airquality) +
-  aes(Solar.R, Wind, 
-      color = as.factor(Month)) +
+  aes(Solar.R, Wind,
+    color = as.factor(Month)
+  ) +
   geom_point(size = 9) +
   scale_color_manual(values = color_range_blue(5)) +
-  labs(title = "A very important plot",
-       color = "Month",
-       x = "Solar",
-       y = "Wind",
-       caption = stringr::str_wrap(shinipsum::random_text(nwords = 20))) +
-  theme_council(use_showtext = TRUE,
-                base_size = 30) +
-  theme(plot.caption = element_text(size = 10),
-        plot.caption.position = "plot")
+  labs(
+    title = "A very important plot",
+    color = "Month",
+    x = "Solar",
+    y = "Wind",
+    caption = stringr::str_wrap(shinipsum::random_text(nwords = 20))
+  ) +
+  theme_council(
+    use_showtext = TRUE,
+    base_size = 30
+  ) +
+  theme(
+    plot.caption = element_text(size = 10),
+    plot.caption.position = "plot"
+  )
 ```
 
 
 ## {}
 ```{r plot-code-2}
-#| echo: true 
+#| echo: true
 #| eval: false
 my_plot +
   theme_council()
@@ -183,38 +198,44 @@ my_plot +
 
 ```{r plot-bad}
 #| fig-cap-location: top
-#| fig-height: 6
+#| out-width: "100%"
 
 multiplier <- 1.5
 
 ggplot(datasets::airquality) +
-  aes(Solar.R, Wind, 
-      color = as.factor(Month)) +
+  aes(Solar.R, Wind,
+    color = as.factor(Month)
+  ) +
   geom_point(size = 9) +
   scale_color_manual(values = color_range_blue(5)) +
-  labs(title = "A very important plot",
-       color = "Month",
-       x = "Solar",
-       y = "Wind",
-       caption = stringr::str_wrap(shinipsum::random_text(nwords = 20))) +
-  theme_council(use_showtext = TRUE,
-                use_manual_font_sizes = TRUE,
-                font_sizes = list(
-                  "title" = 20 * multiplier,
-                  "subtitle" = 16 * multiplier,
-                  "axis_title" = 16 * multiplier,
-                  "axis_text" = 3 * multiplier,
-                  "legend_title" = 5 * multiplier,
-                  "legend_text" = 14 * multiplier,
-                  "caption" = 16 * multiplier,
-                  "strip" = 14 * multiplier
-                )) +
-  theme(axis.title.y = element_text(angle = 90),
-        plot.title = element_text(family = "HelveticaNeueLT Std Med Cn"),
-        plot.caption = element_text(
-          family = "Palatino Linotype"
-        ))
-
+  labs(
+    title = "A very important plot",
+    color = "Month",
+    x = "Solar",
+    y = "Wind",
+    caption = stringr::str_wrap(shinipsum::random_text(nwords = 20))
+  ) +
+  theme_council(
+    use_showtext = TRUE,
+    use_manual_font_sizes = TRUE,
+    font_sizes = list(
+      "title" = 20 * multiplier,
+      "subtitle" = 16 * multiplier,
+      "axis_title" = 16 * multiplier,
+      "axis_text" = 3 * multiplier,
+      "legend_title" = 5 * multiplier,
+      "legend_text" = 14 * multiplier,
+      "caption" = 16 * multiplier,
+      "strip" = 14 * multiplier
+    )
+  ) +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    plot.title = element_text(family = "HelveticaNeueLT Std Med Cn"),
+    plot.caption = element_text(
+      family = "Palatino Linotype"
+    )
+  )
 ```
 
 ## What went wrong?
@@ -228,6 +249,9 @@ ggplot(datasets::airquality) +
 . . . 
 
 No
+
+
+
 <!-- I don't think this story is particularly unique -->
 <!-- we all make mistakes that break other peoples' code -->
 <!-- and we are the ones that have to clean up after ourselves -->
@@ -247,9 +271,9 @@ Team: a group of **individuals** working together
 
 You can __shape__ your team by 
 
-- caring for your team members
+- caring for your new team members
 - seeing how you fit into your team
-- changing your mindset
+- changing how you work
 
 <!-- but how to be a good colleague when someone new comes in -->
 <!-- it isn't always obvious how you should shift your mindset when your team expands -->
@@ -257,7 +281,11 @@ You can __shape__ your team by
 
 <!-- Your manager will accomplish lots of important things for bringing in a new person - but you are the person they get to work with day-to-day! -->
 
-## 
+## When you have a new colleague 
+
+Its your responsibility to bring them on board, too!
+
+## Peer onboarding
 
 1. Make the implicit explicit
 1. All knowledge is valid and valuable
@@ -268,26 +296,33 @@ You can __shape__ your team by
 
 ```{r fish-setup}
 fish_base <- ggplot() +
-  scale_y_continuous(limits = c(0,1.5)) +
-  scale_x_continuous(limits = c(0,1)) +
+  scale_y_continuous(limits = c(0, 1.5)) +
+  scale_x_continuous(limits = c(0, 1)) +
   coord_cartesian(clip = "off") +
   theme_void() +
-  theme(legend.position = "none",
-        plot.background = element_rect(fill = "#A1B4B9",
-                                       colour = NA))
+  theme(
+    legend.position = "none",
+    plot.background = element_rect(
+      fill = "#A1B4B9",
+      colour = NA
+    )
+  )
 
-new_fish <- geom_fish(mapping = aes(x = 0.15,
-                                    y = 0.55,
-                                    fish = "goldfish2"),
-                      size = 3
-) 
+new_fish <- geom_fish(
+  mapping = aes(
+    x = 0.15,
+    y = 0.55,
+    fish = "goldfish2"
+  ),
+  size = 3
+)
 
 
 fish_positions <- tibble::tibble(
   position = 2,
   x = c(0.9, 0.75),
   y = c(0.75, 0.35)
-) %>% 
+) %>%
   bind_rows(
     tibble::tibble(
       position = 1,
@@ -301,13 +336,17 @@ fish_positions <- tibble::tibble(
 ## {background-color=`r section1_color`}
 
 ```{r fish-team, echo = FALSE}
-fish_base + 
-  geom_fish(data = fish_positions %>% 
-              filter(position == 1),
-            aes(x = x,
-                y = y,
-                fish = "goldfish"),
-            size = 4) 
+fish_base +
+  geom_fish(
+    data = fish_positions %>%
+      filter(position == 1),
+    aes(
+      x = x,
+      y = y,
+      fish = "goldfish"
+    ),
+    size = 4
+  )
 ```
 
 
@@ -316,18 +355,21 @@ fish_base +
 <!-- Workplace culture is something you don't think about, because you're in it! -->
 
 ```{r new-fish}
-#| fig-column: screen 
-#| fig-width: 10 
+#| fig-column: screen
+#| fig-width: 10
 #| out-width: "100%"
 
 fish_base +
   geom_fish(
-    data = fish_positions %>% 
+    data = fish_positions %>%
       filter(position == 2),
-    mapping = aes(x = x,
-                  y = y,
-                  fish = "goldfish"),
-    size = 4) +
+    mapping = aes(
+      x = x,
+      y = y,
+      fish = "goldfish"
+    ),
+    size = 4
+  ) +
   new_fish
 ```
 
@@ -335,28 +377,36 @@ fish_base +
 ## {background-color=`r section1_color`}
 
 ```{r fish-how-is-water}
-#| fig-column: screen 
-#| fig-width: 10 
+#| fig-column: screen
+#| fig-width: 10
 #| out-width: "100%"
 
 fish_base +
   geom_fish(
-    data = fish_positions %>% 
+    data = fish_positions %>%
       filter(position == 2),
-    mapping = aes(x = x,
-                  y = y,
-                  fish = "goldfish"),
-    size = 4) +
+    mapping = aes(
+      x = x,
+      y = y,
+      fish = "goldfish"
+    ),
+    size = 4
+  ) +
   new_fish +
-  geom_fish(mapping = aes(x = 0.5,
-                          y = 1.01,
-                          fish = "speech_bubble"),
-            size = 3
+  geom_fish(
+    mapping = aes(
+      x = 0.5,
+      y = 1.01,
+      fish = "speech_bubble"
+    ),
+    size = 3
   ) +
   geom_text(
-    aes(x = 0.5,
-        y = 1.1,
-        label = "How's the water?"),
+    aes(
+      x = 0.5,
+      y = 1.1,
+      label = "How's the water?"
+    ),
     size = 8,
     family = "Lato"
   )
@@ -366,52 +416,68 @@ fish_base +
 
 ```{r fish-blank}
 fish_base +
-  geom_fish(mapping = aes(x = 0.6,
-                          y = 1.01,
-                          fish = "speech_bubble2"),
-            size = 3
+  geom_fish(
+    mapping = aes(
+      x = 0.6,
+      y = 1.01,
+      fish = "speech_bubble2"
+    ),
+    size = 3
   ) +
   geom_text(
-    aes(x = 0.6,
-        y = 1.1,
-        label = "..."),
+    aes(
+      x = 0.6,
+      y = 1.1,
+      label = "..."
+    ),
     size = 8,
     family = "Lato"
   ) +
   new_fish +
   geom_fish(
-    data = fish_positions %>% 
+    data = fish_positions %>%
       filter(position == 2),
-    mapping = aes(x = x,
-                  y = y,
-                  fish = "goldfish"),
-    size = 4) 
+    mapping = aes(
+      x = x,
+      y = y,
+      fish = "goldfish"
+    ),
+    size = 4
+  )
 ```
 
 ## {background-color=`r section1_color`}
 
 ```{r fish-what-is-water}
 fish_base +
-  geom_fish(mapping = aes(x = 0.6,
-                          y = 1.01,
-                          fish = "speech_bubble2"),
-            size = 3
+  geom_fish(
+    mapping = aes(
+      x = 0.6,
+      y = 1.01,
+      fish = "speech_bubble2"
+    ),
+    size = 3
   ) +
   geom_text(
-    aes(x = 0.6,
-        y = 1.1,
-        label = "What the hell\nis water?"),
+    aes(
+      x = 0.6,
+      y = 1.1,
+      label = "What the hell\nis water?"
+    ),
     size = 8,
     family = "Lato"
   ) +
   new_fish +
   geom_fish(
-    data = fish_positions %>% 
+    data = fish_positions %>%
       filter(position == 2),
-    mapping = aes(x = x,
-                  y = y,
-                  fish = "goldfish"),
-    size = 4) 
+    mapping = aes(
+      x = x,
+      y = y,
+      fish = "goldfish"
+    ),
+    size = 4
+  )
 ```
 
 
@@ -421,11 +487,14 @@ fish_base +
 <!-- or say that your water is laid back and chill and like all other waters -->
 ```{r fish-close}
 fish_base +
-  geom_fish(mapping = aes(x = 0.5,
-                          y = 0.5,
-                          fish = "goldfish"),
-            size = 4
-  ) 
+  geom_fish(
+    mapping = aes(
+      x = 0.5,
+      y = 0.5,
+      fish = "goldfish"
+    ),
+    size = 4
+  )
 ```
 
 
@@ -434,38 +503,45 @@ fish_base +
 <!-- or you could sink into an existential crisis -->
 ```{r fish-closer}
 fish_base +
-  geom_fish(mapping = aes(x = 0.5,
-                          y = 0.5,
-                          fish = "goldfish"),
-            size = 8
+  geom_fish(
+    mapping = aes(
+      x = 0.5,
+      y = 0.5,
+      fish = "goldfish"
+    ),
+    size = 8
   )
 ```
 
 
 ## {background-color=`r section1_color`}
 
-```{r anxious-fish}
+```{r anxious-fish, warning=FALSE}
 fish_base +
-  geom_fish(mapping = aes(x = 1.5,
-                          y = 0.8,
-                          fish = "goldfish"),
-            size = 20
+  geom_fish(
+    mapping = aes(
+      x = 1.5,
+      y = 0.8,
+      fish = "goldfish"
+    ),
+    size = 20
   ) +
-  scale_x_continuous(limits = c(0, 1.5)) 
+  scale_x_continuous(limits = c(0, 1.5))
 ```
 
 ## Don't deny that water exists {background-color=`r section1_color`}
 <!-- so, before you turn into an anxious goldfish... -->
 
+
 - Everyone has their pet peeves and preferences 
+<!-- maybe you have a super strict file organization scheme -->
+<!-- or you are morally opposed using any tidyverse -->
 - Every team has a culture
 - Don't give your coworker the task of defining water in addition to evaluating if the water is right for them.
 
-<!-- maybe you have a super strict file organization scheme -->
-<!-- or you are morally opposed using any tidyverse -->
 
 
-## How is your water? {background-color=`r section1_color`}
+## Define your water {background-color=`r section1_color`}
 
 - What does your weekly schedule look like?
 - What tools do you use daily? Why?
@@ -478,24 +554,24 @@ fish_base +
 <!-- - I recommend using a Git GUI (like GitKraken) -->
 <!-- - A git GUI is a great way to visualize branches and track progress over time. -->
 
-# All knowledge is valuable {background-color=`r section2_color`}  
+# All knowledge is valid and valuable {background-color=`r section2_color`}  
 
 
-##  {background-color=`r section2_color`}
+## No one is an empty vessel {background-color=`r section2_color`}
 
 
 <!-- they have certain skill your team may have been lacking -->
 
-<!-- You can hand two different people a challenging problem and they both can come up with totally different ways of solving it -->
-
 All the knowledge the new person brings is valuable
 
+- no matter where they are coming from
+- even if it seems unrelated
 
-- no matter where they are coming from!
-
+::: {.fragment .fade-up}
+Your knowledge it is not inherently superior
+:::
 
 <!-- There is a lot of work that your manager will take care of... -->
-<!-- the recipe for trust  -->
 
 
 ## Give your new colleague grace {background-color=`r section2_color`}
@@ -512,7 +588,7 @@ All the knowledge the new person brings is valuable
 
 
 # Document {background-color=`r section3_color`}
-
+(make life easier for your friends)
 
 ## {background-color=`r section3_color` style="text-align:center;"}
 ::: {.r-stack}
@@ -560,13 +636,6 @@ Just remember to leave a trail for others to follow
 
 Good communication requires knowing your audience
 
-```{mermaid}
-flowchart LR
-  A(Documentation) === B[[Communication]]
-  
-  B --> C{Decision}
-```
-
 ## Work doesn't always feel like work {background-color=`r section3_color`}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
@@ -574,14 +643,14 @@ flowchart LR
 <!-- do things that don't feel like work -->
 - Schedule time to build connections and trust. 
 <!-- try making every other team meeting a casual hang out -->
-- Social gatherings are just as valuable as focus time
-
+- Social gatherings (virtual or in person!) are just as valuable as focus time
+<!-- virtual social gatherings -->
 
 # Ultimately...
 
 ## There is an "I" in "Team"
 
-Teams are made up of a bunch of individuals, and its not just the manager's job to make it work.
+Teams are made up of individuals, and its not only the manager's job to make it work.
 
 I've grown immensely from working with my colleagues
 <!-- and only a small portion of that is because of my manager -->
@@ -598,13 +667,13 @@ I've grown immensely from working with my colleagues
 ::: {.nonincremental}
 - Barbie Image copyright (©) Warner Bros. Pictures or related entities. Used for publicity and promotional purposes.
 - Fish
-    - [Fish 1](https://pngimg.com/image/67588)
-    - [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 
+- [Fish 1](https://pngimg.com/image/67588)
+- [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 
 - Cereal
-    - The Suite Life of Zack and Cody Quotes. (n.d.). Quotes.net. Retrieved September 12, 2023, from https://www.quotes.net/mquote/928559.
-    - [Cereal](https://www.pngwing.com/en/free-png-xzukp)
-    - [Milk](https://www.deviantart.com/vacagalo/art/milk-drop-png-milk-splash-transparent-background-P-869641339)
-    - [Bowl](https://www.pngwing.com/en/free-png-izipa)
+- The Suite Life of Zack and Cody Quotes. (n.d.). Quotes.net. Retrieved September 12, 2023, from https://www.quotes.net/mquote/928559.
+- [Cereal](https://www.pngwing.com/en/free-png-xzukp)
+- [Milk](https://www.deviantart.com/vacagalo/art/milk-drop-png-milk-splash-transparent-background-P-869641339)
+- [Bowl](https://www.pngwing.com/en/free-png-izipa)
 - David Foster Wallace 2005 Kenyon College commencement speech [here](https://fs.blog/david-foster-wallace-this-is-water/)
 
 :::

@@ -3,10 +3,10 @@
 
 This repo contains slides and supporting materials for my presentation at the [2023 Posit Conference](https://posit.co/conference/) in Chicago, September 17th-20th.  
 
-> R users don't always come in teams. Often, you may be the only useR on the block. But, one miraculous day, you get to welcome more R folks on your team. Suddenly, the little R system you created to suit your needs, like a custom R package, styling, and file organization, isn't just for you.
-> 
-> Want to suddenly overhaul that one package you wrote two years ago? It probably won't work when your colleagues try to update it. Your new teammates are data.table fans, but you prefer the tidyverse. Do you need to refactor? Are style choices, like indentation important when collaborating, or are you just being persnickety?
-> 
+> R users don’t always come in sets. Often, you may be the only user on in the cubicle-block. But, one miraculous day, your manager finally fills the void and you welcome more folks on your team. Suddenly, the little R system you created to suit your needs, like a custom package, code styling, and file organization, isn’t just for you.
+>
+> Want to suddenly overhaul that one package you wrote two years ago? It probably won’t work when your colleagues try to update it. Your new teammates are data.table fans, but you prefer the tidyverse. Do you need to refactor? Are style choices, like indentation important when collaborating, or are you just being persnickety?
+>
 > In this talk, you will learn how to bring new teammates on board and blend your respective styles without pulling your hair out.
 
 ## Dates, logistics, requirements, etc.      
@@ -47,4 +47,7 @@ Built with Quarto
 
 ### Repo structure  
 
-TBD
+- `slides.qmd` renders `slides.html`
+- `theme.scss` determines CSS styling rules
+- `_extensions/`, `partials/` contain material used by Quarto
+- `img/` contains all PNG and JPEG images used in the presentation

@@ -537,7 +537,7 @@ fish_base +
 <!-- maybe you have a super strict file organization scheme -->
 <!-- or you are morally opposed using any tidyverse -->
 - Every team has a culture
-- Don't give your coworker the task of defining water in addition to evaluating if the water is right for them.
+- Don't give your new coworker the task of defining water in addition to evaluating if the water is right for them.
 
 
 
@@ -614,9 +614,9 @@ The bowl!
 
 :::
 
-## Data science is a creative field {background-color=`r section3_color`}
+## Documentation is the bowl {background-color=`r section3_color`}
 
-There are many ways to solve a problem 
+Data science is a creative field: there are many ways to solve a problem 
 
 . . . 
 
@@ -639,7 +639,6 @@ Good communication requires knowing your audience
 ## Work doesn't always feel like work {background-color=`r section3_color`}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
-- Documentation is communication
 <!-- do things that don't feel like work -->
 - Schedule time to build connections and trust. 
 <!-- try making every other team meeting a casual hang out -->
@@ -650,12 +649,13 @@ Good communication requires knowing your audience
 
 ## There is an "I" in "Team"
 
-Teams are made up of individuals, and its not only the manager's job to make it work.
-
-I've grown immensely from working with my colleagues
+- Teams are made up of individuals, and its not only the manager's job to make it work.
+- Onboarding is a unique and critical time
+- I've grown immensely from working with my colleagues
 <!-- and only a small portion of that is because of my manager -->
 
 <!-- Investing in your team not just as a manger, but as a coworker -->
+<!-- and we had to acknowledge that there are individuals in our team -->
 
 # Thank you
 
@@ -666,14 +666,14 @@ I've grown immensely from working with my colleagues
 
 ::: {.nonincremental}
 - Barbie Image copyright (©) Warner Bros. Pictures or related entities. Used for publicity and promotional purposes.
-- Fish
-- [Fish 1](https://pngimg.com/image/67588)
-- [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 
-- Cereal
-- The Suite Life of Zack and Cody Quotes. (n.d.). Quotes.net. Retrieved September 12, 2023, from https://www.quotes.net/mquote/928559.
-- [Cereal](https://www.pngwing.com/en/free-png-xzukp)
-- [Milk](https://www.deviantart.com/vacagalo/art/milk-drop-png-milk-splash-transparent-background-P-869641339)
-- [Bowl](https://www.pngwing.com/en/free-png-izipa)
-- David Foster Wallace 2005 Kenyon College commencement speech [here](https://fs.blog/david-foster-wallace-this-is-water/)
+- David Foster Wallace 2005 Kenyon College [commencement speech](https://fs.blog/david-foster-wallace-this-is-water/)
+    - [Fish 1](https://pngimg.com/image/67588)
+    - [Fish 2](https://www.pngfind.com/mpng/ihTbmxR_goldfish-png-free-images-gold-fish-transparent-png/) 
+- Cereal or milk?
+    - The Suite Life of Zack and Cody Quotes. (n.d.). Quotes.net. Retrieved September 12, 2023, from https://www.quotes.net/mquote/928559.
+    - [Cereal](https://www.pngwing.com/en/free-png-xzukp)
+    - [Milk](https://www.deviantart.com/vacagalo/art/milk-drop-png-milk-splash-transparent-background-P-869641339)
+    - [Bowl](https://www.pngwing.com/en/free-png-izipa)
+
 
 :::

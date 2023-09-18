@@ -637,6 +637,8 @@ Just remember to leave a trail for others to follow
 Good communication requires knowing your audience
 
 ![](img/conf23-hero2-static.png)
+
+
 ## Work doesn't always feel like work {background-color=`r section3_color`}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->

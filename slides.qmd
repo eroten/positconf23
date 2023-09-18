@@ -117,12 +117,12 @@ And by tiny, I mean 2 people.
 
 ## ...how bad was the incident?
 ::: {.fragment .strike}
-In the beginning, I wrote an R package for my org
+In the beginning, I wrote an R package for my org.
 :::
 
 ## ...how bad was the incident?
 
-In the beginning, I wrote an R package for __myself__
+In the beginning, I wrote an R package for __myself__.
 
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
 
@@ -144,7 +144,7 @@ My colleague installed the update.
 
 <br>
 
-... while they were writing a time sensitive report
+... while they were writing a time sensitive report.
 
 <!-- It has all sorts of practical things, like color codes, ggplot2 themes, and database helpers.  -->
 <!-- Of my own accord, I decided that we should use a more flexible font sizing scheme for our ggplot2 theme.  -->
@@ -564,8 +564,8 @@ fish_base +
 
 All the knowledge the new person brings is valuable
 
-- no matter where they are coming from
-- even if it seems unrelated
+- No matter where they are coming from
+- Even if it seems unrelated
 
 ::: {.fragment .fade-up}
 Your knowledge it is not inherently superior
@@ -588,7 +588,7 @@ Your knowledge it is not inherently superior
 
 
 # Document {background-color=`r section3_color`}
-(make life easier for your friends)
+(aka, make life easier for your friends)
 
 ## {background-color=`r section3_color` style="text-align:center;"}
 ::: {.r-stack}
@@ -636,6 +636,7 @@ Just remember to leave a trail for others to follow
 
 Good communication requires knowing your audience
 
+![](img/conf23-hero2-static.png)
 ## Work doesn't always feel like work {background-color=`r section3_color`}
 
 <!-- I'll take a wild guess and say that most of you didn't go into a quantitative field because you are naturally effervescent  -->
@@ -675,6 +676,7 @@ Good communication requires knowing your audience
     - [Cereal](https://www.pngwing.com/en/free-png-xzukp)
     - [Milk](https://www.deviantart.com/vacagalo/art/milk-drop-png-milk-splash-transparent-background-P-869641339)
     - [Bowl](https://www.pngwing.com/en/free-png-izipa)
+- posit::conf(2023) art © Posit, PBC. 2023
 
 
 :::

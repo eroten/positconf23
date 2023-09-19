@@ -138,7 +138,7 @@ In the beginning, I wrote an R package for __myself__.
 
 <br>
 
-My colleague installed the update.
+My colleague installed the update
 
 . . . 
 
@@ -272,8 +272,8 @@ Team: a group of **individuals** working together
 You can __shape__ your team by 
 
 - caring for your new team members
-- seeing how you fit into your team
-- changing how you work
+- seeing how you fit into your team, and
+- changing how you work.
 
 <!-- but how to be a good colleague when someone new comes in -->
 <!-- it isn't always obvious how you should shift your mindset when your team expands -->
@@ -533,10 +533,10 @@ fish_base +
 <!-- so, before you turn into an anxious goldfish... -->
 
 
-- Everyone has their pet peeves and preferences 
+- Everyone has their pet peeves and preferences.
 <!-- maybe you have a super strict file organization scheme -->
 <!-- or you are morally opposed using any tidyverse -->
-- Every team has a culture
+- Every team has a culture.
 - Don't give your new coworker the task of defining water in addition to evaluating if the water is right for them.
 
 
@@ -562,13 +562,13 @@ fish_base +
 
 <!-- they have certain skill your team may have been lacking -->
 
-All the knowledge the new person brings is valuable
+All the knowledge the new person brings is valuable.
 
 - No matter where they are coming from
 - Even if it seems unrelated
 
 ::: {.fragment .fade-up}
-Your knowledge it is not inherently superior
+Your knowledge it is not inherently superior.
 :::
 
 <!-- There is a lot of work that your manager will take care of... -->
@@ -576,13 +576,13 @@ Your knowledge it is not inherently superior
 
 ## Give your new colleague grace {background-color=`r section2_color`}
 
-- Patience will prove best
-- You are also on probation
+- Patience will prove best.
+- You are on probation, too!
 <!-- your manager will do a lot of the legwork to get this person onboard,  -->
 <!-- like setting up timesheets and going through workplace policies -->
 <!-- but you are still the person they will be actually working with -->
 <!-- you will have to bring this person up to speed, and that is part of it -->
-- Don't rely on catch-all assumptions: ask for specifics
+- Don't rely on catch-all assumptions: ask for specifics.
 <!-- someone with command line git experience versus a GUI will have different needs -->
 
 
@@ -616,25 +616,25 @@ The bowl!
 
 ## Documentation is the bowl {background-color=`r section3_color`}
 
-Data science is a creative field: there are many ways to solve a problem 
+Data science is a creative field: there are many ways to solve a problem .
 
 . . . 
 
-Embrace the diversity of opinion and experience
+Embrace the diversity of opinion and experience.
 
 . . . 
 
-Just remember to leave a trail for others to follow
+Just remember to leave a trail for others to follow.
 
 ## A matter of investment {background-color=`r section3_color`}
 
 - **Invest** in tools that encourage documentation and lower cognitive load.
-- **Invest** in the time it takes to document/clean up/organize your work
-- **Invest** in strong social relationships
+- **Invest** in the time it takes to document/clean up/organize your work.
+- **Invest** in strong social relationships.
 
 ## Documentation == Communication {background-color=`r section3_color`}
 
-Good communication requires knowing your audience
+Good communication requires knowing your audience!
 
 ![](img/conf23-hero2-static.png)
 
@@ -654,8 +654,8 @@ Good communication requires knowing your audience
 ## There is an "I" in "Team"
 
 - Teams are made up of individuals, and its not only the manager's job to make it work.
-- Onboarding is a unique and critical time
-- I've grown immensely from working with my colleagues
+- Onboarding is a unique and critical time.
+- I've grown immensely from working with my colleagues.
 <!-- and only a small portion of that is because of my manager -->
 
 <!-- Investing in your team not just as a manger, but as a coworker -->
